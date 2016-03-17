@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机选人-3</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onselectstart="return false"><!--防止页面文字被选中-->
+	
+    <!--2, 改写视图为模板字符串-->
+	<div class="wrap" id="wrap">
+	<!--photo负责平移，旋转-->
+		<img src="imgs/bg.jpg">
+		<div class="photo  photo_front" onclick="turn(this)" id="photo_{{index}}">
+		<!--photo-wrap负责3D翻转-->
+		<div class="photo-wrap">
+			<div class="side side-front">
+				<p class="image"><img src="imgs/{{img}}"></p>
+				<p class="caption">{{caption}}</p>
+			</div>
+			<div class="side side-back">
+				<p><img src="imgs/pk4.jpg"></p>
+			</div>
+		</div>
+		</div>
+		<a href="鼓掌.html" class="anniu"><img src="imgs/an.jpg"></a>
+	</div>
+	<!--js文件必须要在html文档内容输出后再输出 
+			而且必须先执行data.js (先有数据) 
+			再执行gongneng.js     (再操作数据)-->
+	<script src="js/data.js"></script>
+	<script src="js/gongneng.js"></script>
+
+</body> 
+</html> 
